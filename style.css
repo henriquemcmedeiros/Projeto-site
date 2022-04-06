@@ -1,16 +1,224 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(204, 157, 248);
+    background-color: #77221f;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #d42a1c;
+    margin: 0;
+    padding: 10px 50px 50px 50px;
 }
 
-main {
-    background-color: white;
-    width: 500px;
-    margin: auto;
+h1, h2 {
+    margin: 0;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    user-select: none;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+#logoImg {
+    width: 250px;
+    height: 250px;
+    pointer-events: none;
+}
+
+.menu {
+    background-color: #d42a1c;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.menu a {
+    padding: 14px;
+    color: #bf9c62;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #bf9c62;
+    color: #d42a1c;
+}
+
+.coluna-esquerda {
+    float: left;
+    width: 75%;
+}
+
+.coluna-direita {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: #bf9c62;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#promoção {
+    font-size: 1vw;
+    position: relative;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+#promoção:hover {
+    box-shadow: 2px 2px 2px lightsalmon;
+}
+
+.sobreImg {
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.sobreImg:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
+.sobreItens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.promo {
+    display: flex;
+    overflow: hidden;
+    font-size: 0.75rem;
     padding: 10px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.promo:hover {
+    box-shadow: 0px 0px 5px black;
+}
+
+.promoImg {
+    display: flex;
+    width: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.ContatoImg {
+    border-radius: 50%;
+    width: 75px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ContatoImg:hover {
+    opacity: 0.5;
+}
+
+.produto {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.produto:hover {
+    box-shadow: 5px 5px 10px black;
+}
+
+.produto img {
+    border-radius: 50%;
+    width: 150px;
+    border: 2px solid #d42a1c; 
+}
+
+.grid {
+    display: grid;
+    font-weight: bold;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#entrega {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    height: 100px;
+    width: 250px;
+}
+
+#entrega img {
+    position: absolute;
+    width: 50px;
+    right: 10px;
+}
+
+#tel {
+    position: absolute;
+    height: 60px;
+    background-color: #bf9c62;
+    color: #d42a1c;
+    margin-top: 10px;
+    padding: 10px;
+    left: -5px;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border: 2px solid #d42a1c;
+}
+
+#entrega img:hover + #tel{
+    opacity: 1;
+}
+
+#tel p {
+    margin: 0px;
+}
+
+#contato a {
+    text-decoration: none;
+}
+
+#SobreNos a {
+    text-decoration: none;
+    color: #d42a1c;
+}
+
+.voltar img {
+    width: 50px;
+}
+
+#sobre p {
+    color: black;
+}
+
+/* Ajustar tamanho da promoção*/
+@media screen and (max-width: 800px) {
+
+    .coluna-esquerda {
+        width: 100%;
+    }
+    
+    .coluna-direita {
+        width: 100%;
+        padding: 0;
+    }
+
+    .promocao {
+        font-size: 500px;
+    }
 }
